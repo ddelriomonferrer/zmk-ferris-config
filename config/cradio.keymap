@@ -46,14 +46,16 @@
 
     keymap {
         compatible = "zmk,keymap";
+
+        //layer number 0
         default_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
-            &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P
+            &kp Q      &kp W      &kp E      &kp R      &kp T          &lt 3 Y      &kp U      &kp I      &kp O      &kp P
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ / ?      │
-            HRML(A,        S,         D,         F)     &kp G          &kp H      HRMR(J,        K,         L,        FSLH)
+            HRML(A,        S,         D,         F)     &lt 5 G       &lt 4 H      HRMR(J,        K,         L,        FSLH)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ; :      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp SEMI
@@ -63,6 +65,7 @@
             >;
         };
 
+        //layer number 1
         right_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
@@ -73,21 +76,23 @@
              &kp AMPS &kp LBRC  &kp RBRC  &kp SLASH  &kp BSLH          &kp F6      &kp F7     &kp F8     &kp F9    &kp F10
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│    @     │  [       │    ]     │  *       │  =       │   │    F11   │    F12   │ PRSCRN   │  PRSCRN  │          │
-            &kp AT  &kp LBKT  &kp RBKT  &kp ASTRK  &kp EQUAL         &kp F11      &kp F12   CAPP        CPYP       &trans 
+            &kp      AT  &kp LBKT  &kp RBKT  &kp ASTRK  &kp EQUAL         &kp F11      &kp F12   CAPP        CPYP       &trans 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &kp PIPE  &kp PERCENT     &trans     &trans  
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
 
+
+        //layer number 2
         left_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │GENERATE  │IMPORTS   │ RENAME   │ DELETE   │   │  HOME    │ PG DOWN  │ PG UP    │  END     │          │
             &trans     GENER      IMPOR      RENAME     &kp DEL        &kp HOME  &kp PG_DN  &kp PG_UP   &kp END    &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │CAPS LOCK │   │  LEFT    │  DOWN    │   UP     │   RIGH   │ INSERT   │
-             &trans     &trans     &trans     &trans     &kp CAPS      &kp LEFT   &kp DOWN    &kp UP    &kp RIGHT   &kp INS
+        //│          │ ESC      │          │          │CAPS LOCK │   │  LEFT    │  DOWN    │   UP     │   RIGH   │ INSERT   │
+             &trans    &kp ESC    &trans     &trans     &kp CAPS      &kp LEFT   &kp DOWN    &kp UP    &kp RIGHT   &kp INS
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │ SEARCH   │  OPEN    │ COMPILE  │          │   │  &       │  _       │  +       │  │       │          │
             &trans     SEARCH      OPEN       COMPI     &trans         &trans      &trans    &trans      &trans     &trans
@@ -97,6 +102,8 @@
             >;
         };
 
+
+        //layer number 3
         tri_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
@@ -114,6 +121,8 @@
             >;
         };
 
+
+        //layer number 4
         number_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
@@ -131,6 +140,7 @@
             >;
         };
 
+       //layer number 5
        tilde_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
