@@ -14,6 +14,15 @@
 #define CAPP &kp LG(LS(N4)) // Capture portion of screen   
 #define CPYP &kp LG(LS(LC(N4))) // Copy portion of screen
 
+
+//intellij shortcuts
+#define RENAME &kp LS(F6)
+#define IMPOR &kp LA(LC(O))
+#define GENER &kp LG(N)
+#define COMPI &kp LG(F9)
+#define SEARCH &kp LS(LG((R)))
+#define OPEN &kp LG(O)
+
 / {
     behaviors {
         ht: hold_tap {
@@ -74,14 +83,14 @@
         left_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │  [       │  {       │  }       │          │   │  ^       │  (       │  )       │  ]       │  ~       │
-            &trans     &kp LBKT   &kp LBRC   &kp RBRC   &trans         &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT   &kp TILDE
+        //│          │GENERATE  │IMPORTS   │ RENAME   │ DELETE   │   │  HOME    │ PG DOWN  │ PG UP    │  END     │          │
+            &trans     GENER      IMPOR      RENAME     &kp DEL        &kp HOME  &kp PG_DN  &kp PG_UP   &kp END    &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  !       │  @       │  #       │  $       │  %       │   │  *       │  -       │  =       │  \       │  `       │
-            &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH   &kp GRAVE
+        //│          │          │          │          │CAPS LOCK │   │  LEFT    │  DOWN    │   UP     │   RIGH   │ INSERT   │
+             &trans     &trans     &trans     &trans     &kp CAPS      &kp LEFT   &kp DOWN    &kp UP    &kp RIGHT   &kp INS
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │  &       │  _       │  +       │  │       │          │
-            &trans     &trans     &trans     &trans     &trans         &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
+        //│          │ SEARCH   │  OPEN    │ COMPILE  │          │   │  &       │  _       │  +       │  │       │          │
+            &trans     SEARCH      OPEN       COMPI     &trans         &trans      &trans    &trans      &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
