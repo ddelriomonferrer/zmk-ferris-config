@@ -9,6 +9,11 @@
 #define HRML(k1,k2,k3,k4) &ht LCTRL k1  &ht LGUI k2  &ht LALT k3  &ht LSHFT k4
 #define HRMR(k1,k2,k3,k4) &ht RSHFT k1  &ht RALT k2  &ht RGUI k3  &ht RCTRL k4
 
+#define CAPW &kp LG(LS(N3)) // Capture whole screen 
+#define CPYW &kp LG(LS(LC(N3))) // Copy whole screen 
+#define CAPP &kp LG(LS(N4)) // Capture portion of screen   
+#define CPYP &kp LG(LS(LC(N4))) // Copy portion of screen
+
 / {
     behaviors {
         ht: hold_tap {
@@ -52,16 +57,16 @@
         right_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ INSERT   │  1       │  2       │  3       │          │   │ HOME     │ PAGE DN  │ PAGE UP  │ END      │  :       │
-            &kp INS    &kp N1     &kp N2     &kp N3     &trans         &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
+        //│  #       │  (       │    )     │  $       │    ~     │   │   F1     │    F2    │   F3     │    F4    │   F5     │
+             &kp HASH &kp LPAR &kp RPAR    &kp DOLLAR   &kp TILDE       &kp F1      &kp F2     &kp F3     &kp F4    &kp F5
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ DELETE   │  4       │  5       │  6       │          │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  ;       │
-            &kp DEL    &kp N4     &kp N5     &kp N6     &trans         &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT   &kp SEMI
+        //│  &       │   {      │    }     │  /       │    \     │   │   F6     │    F7    │   F8     │    F9    │   F10    │
+             &kp AMPS &kp LBRC  &kp RBRC  &kp SLASH  &kp BSLH          &kp F6      &kp F7     &kp F8     &kp F9    &kp F10
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ CAPS     │  7       │  8       │  9       │  0       │   │          │          │          │          │          │
-           &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &trans     &trans     &trans     &trans     &trans
+        //│    @     │  [       │    ]     │  *       │  =       │   │    F11   │    F12   │ PRSCRN   │  PRSCRN  │          │
+            &kp AT  &kp LBKT  &kp RBKT  &kp ASTRK  &kp EQUAL         &kp F11      &kp F12   CAPP        CPYP       &trans 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &kp ESC        &trans     &trans
+                                             &kp PIPE  &kp PERCENT     &trans     &trans  
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
