@@ -6,8 +6,8 @@
 #include <dt-bindings/zmk/bt.h>
 
 // Home row mods macro
-#define HRML(k1,k2,k3,k4) &ht LCTRL k1  &ht LALT k2  &ht LGUI k3  &ht LSHFT k4
-#define HRMR(k1,k2,k3,k4) &ht RSHFT k1  &ht RGUI k2  &ht RALT k3  &ht RCTRL k4
+#define HRML(k1,k2,k3,k4) &hts LGUI k1  &hts LALT k2  &hts LCTRL k3  &htf LSHFT k4
+#define HRMR(k1,k2,k3,k4) &htf LSHFT k1  &hts LCTRL k2  &hts LALT k3  &hts LGUI k4
 
 #define CAPW &kp LG(LS(N3)) // Capture whole screen 
 #define CPYW &kp LG(LS(LC(N3))) // Copy whole screen 
@@ -24,17 +24,48 @@
 
 //TODO define combos
 
+#define DEF_L 0
+#define LOW_L 1
+#define RAI_L 2
+#define NUM_L 3
+#define ARR_L 4
+#define BLE_L 5
+#define TES_L 6
+
 / {
-    behaviors {
-        ht: hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <190>;
-            quick-tap-ms = <0>;
-            bindings = <&kp>, <&kp>;
-        };
-    };
+	behaviors {
+		ht: hold_tap_mods_standard {
+			compatible = "zmk,behavior-hold-tap";
+			label = "HOMEROW_MODS";
+			#binding-cells = <2>;
+			tapping-term-ms = <400>;
+			quick-tap-ms = <300>;
+			flavor = "tap-preferred";
+			bindings = <&kp>, <&kp>;
+		};
+        
+        // hold-tap fast
+		htf: hold_tap_mods_fast {
+			compatible = "zmk,behavior-hold-tap";
+			label = "HOMEROW_MODS";
+			#binding-cells = <2>;
+			tapping-term-ms = <180>;
+			quick-tap-ms = <300>;
+			flavor = "tap-preferred";
+			bindings = <&kp>, <&kp>;
+		};
+
+        // hold-tap slow
+		hts: hold_tap_mods_slow {
+			compatible = "zmk,behavior-hold-tap";
+			label = "HOMEROW_MODS";
+			#binding-cells = <2>;
+			tapping-term-ms = <400>;
+			quick-tap-ms = <200>;
+			flavor = "tap-preferred";
+			bindings = <&kp>, <&kp>;
+		};
+	};
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
@@ -55,28 +86,28 @@
             &kp Q      &kp W      &kp E      &kp R      &kp T          &lt 3 Y      &kp U      &kp I      &kp O      &kp P
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ BSPC     │
-            HRML(A,        S,         D,         F)     &lt 5 G       &lt 4 H      HRMR(J,        K,         L,        BSPC)
+            HRML(A,        S,         D,         F)     &kp G          &kp H      HRMR(J,        K,         L,        BSPC)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ; :      │
-            &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp SEMI
+            &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &ht RGUI TAB   &lt 2 SPACE     &lt 1 ENTER  &ht RGUI MINUS
+                                             &kp BKSP   &mo LOW_L     &mo RAI_L   &kp SPACE
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
 
         //layer number 1
-        right_layer {
+        lower_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  #       │  (       │    )     │  $       │    ~     │   │   F1     │    F2    │   F3     │    F4    │   F5     │
-             &kp HASH &kp LPAR &kp RPAR    &kp DOLLAR   &kp TILDE       &kp F1      &kp F2     &kp F3     &kp F4    &kp F5
+        //│  !       │  "       │    ·     │  $       │    %     │   │   &      │    /     │   (      │    )     │    =     │
+           &kp LS(N1) &kp LS(N2) &kp LS(N3) &kp LS(N4) &kp LS(N5)     &kp LS(N6) &kp LS(N7) &kp LS(N8) &kp LS(N9) &kp LS(N10)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  &       │   {      │    }     │  /       │    \     │   │   F6     │    F7    │   F8     │    F9    │   F10    │
-             &kp AMPS &kp LBRC  &kp RBRC  &kp SLASH  &kp BSLH          &kp F6      &kp F7     &kp F8     &kp F9    &kp F10
+        //│  &       │   {      │    }     │  /       │    \     │   │   ¬      │    *     │   ¿      │    ?     │   ¡      │
+           &kp RA(N1) &kp RA(N2) &kp RA(N3) &kp RA(N4) &kp RA(N5)     &kp RA(N6) &kp ASTRK  &kp LS(EQUAL) &kp LS(MINUS) &kp	EQUAL
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│    @     │  [       │    ]     │  *       │  =       │   │    F11   │    F12   │ PRSCRN   │  PRSCRN  │          │
-            &kp      AT  &kp LBKT  &kp RBKT  &kp ASTRK  &kp EQUAL         &kp F11      &kp F12   CAPP        CPYP       &trans 
+        //│          │          │    ç     │          │          │   │          │          │          │          │   CAPS   │
+            &trans     &trans     &kp NUHS  &kp trans  &kp LG(LS(S))   &trans     &trans     &trans     &trans     &kp CAPS
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &kp PIPE  &kp PERCENT     &trans     &trans  
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -85,7 +116,7 @@
 
 
         //layer number 2
-        left_layer {
+        raise_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │GENERATE  │IMPORTS   │ RENAME   │ DELETE   │   │  HOME    │ PG DOWN  │ PG UP    │  END     │          │
