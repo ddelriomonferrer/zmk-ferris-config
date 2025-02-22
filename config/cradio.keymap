@@ -14,7 +14,6 @@
 #define CAPP &kp LG(LS(N4)) // Capture portion of screen   
 #define CPYP &kp LG(LS(LC(N4))) // Copy portion of screen
 
-
 //intellij shortcuts
 #define RENAME &kp LS(F6)
 #define IMPOR &kp LA(LC(O))
@@ -22,6 +21,8 @@
 #define COMPI &kp LG(F9)
 #define SEARCH &kp LS(LG((R)))
 #define OPEN &kp LG(O)
+
+//TODO define combos
 
 / {
     behaviors {
