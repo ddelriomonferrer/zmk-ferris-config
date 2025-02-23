@@ -76,9 +76,19 @@
 	    key-positions = <0 1>;
 	    bindings = <&kp TAB>;
 	};
+	combo_tab_2 {
+	    timeout-ms = <50>;
+	    key-positions = <3 4>;
+	    bindings = <&kp TAB>;
+	};
 	combo_esc {
 	    timeout-ms = <50>;
 	    key-positions = <10 11>;
+	    bindings = <&kp ESC>;
+	};
+	combo_esc_2 {
+	    timeout-ms = <50>;
+	    key-positions = <13 14>;
 	    bindings = <&kp ESC>;
 	};
     };
