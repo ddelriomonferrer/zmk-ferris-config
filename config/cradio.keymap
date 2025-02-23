@@ -140,9 +140,9 @@
 
 		arrows_layer {
 			bindings = <
-				&trans			&trans			&trans			&trans			&trans					&trans			&kp HOME		&kp UP			&kp END			&trans
+				&trans			&trans			&trans			&trans			&trans					&trans			&kp HOME		&kp UP			&kp PAGE_UP		&trans
 				&ht LGUI A		&ht LALT S	 	&ht LCTRL D 		&ht LSHIFT F  		&trans					&trans			&kp LEFT		&kp DOWN		&kp RIGHT		&trans
-				&kp LG(Z)		&kp LG(X)		&kp LG(C)		&kp LG(V)		&trans					&trans			&kp PAGE_UP		&trans			&kp PAGE_DOWN		&trans
+				&kp LC(Z)		&kp LC(X)		&kp LC(C)		&kp LC(V)		&trans					&trans			&kp END			&trans			&kp PAGE_DOWN		&trans
 													&kp BKSP  		&trans 					&trans			&trans
 			>;
 		};
