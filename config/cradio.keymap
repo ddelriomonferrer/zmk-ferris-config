@@ -115,78 +115,53 @@
         };
 
 
-        //layer number 2
-        raise_layer {
-            bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │GENERATE  │IMPORTS   │ RENAME   │ DELETE   │   │  HOME    │ PG DOWN  │ PG UP    │  END     │          │
-            &trans     GENER      IMPOR      RENAME     &kp DEL        &kp HOME  &kp PG_DN  &kp PG_UP   &kp END    &trans
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │ ESC      │          │          │CAPS LOCK │   │  LEFT    │  DOWN    │   UP     │   RIGH   │ INSERT   │
-             &trans    &kp ESC    &trans     &trans     &kp CAPS      &kp LEFT   &kp DOWN    &kp UP    &kp RIGHT   &kp INS
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │ SEARCH   │  OPEN    │ COMPILE  │          │   │  &       │  _       │  +       │  │       │          │
-            &trans     SEARCH      OPEN       COMPI     &trans         &trans      &trans    &trans      &trans     &trans
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
-            >;
-        };
+		raise_layer {
+			bindings = <
+				&kp N1			&kp N2		  	&kp N3			&kp N4			&kp N5		  			&kp N6			&kp N7			&kp N8			&kp N9			&kp N0
+				&trans			&trans			&trans			&trans			&trans					&trans			&kp RA(APOS)	        &kp RA(NUHS)		&kp RA(LBKT)		&kp RA(RBKT)			
+				&trans			&trans			&kp LS(NUHS)	        &trans			&trans					&trans			&kp NUBS		&kp LS(NUBS)		&trans			&trans
+													&kp SPACE		&mo TES_L				&trans			&bootloader		
+			>;
+		};
 
 
-        //layer number 3
-        tri_layer {
-            bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │  RESET   │
-           &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0    &trans     &trans     &trans     &trans    &sys_reset
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
-          &bootloader  &trans     &trans     &trans    &bt BT_SEL 1    &trans     &trans     &trans     &trans    &bootloader
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
-            &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &trans     &trans     &trans
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
-            >;
-        };
+		num_layer {
+			bindings = <
+				&kp F1	  		&kp F2			&kp F3			&kp F4			&trans					&trans			&kp N7			&kp N8			&kp N9			&kp LS(RBKT)
+				&kp F5			&kp F6			&kp F7			&kp F8			&trans					&trans			&kp N4			&kp N5			&kp N6			&kp RBKT	
+				&kp F9			&kp F10			&kp F11			&kp F12			&trans					&trans			&kp N1			&kp N2			&kp N3			&kp FSLH	
+													&trans 			&trans					&kp COMMA		&kp DOT
+			>;
+		};
 
 
-        //layer number 4
-        number_layer {
-            bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│    1     │  2       │  3       │  4       │  5       │   │          │          │          │          │          │
-             &kp N1     &kp N2    &kp N3      &kp N4     &kp N5         &trans     &trans     &trans     &trans     &trans
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  6       │  7       │  8       │  9       │  0       │   │          │          │          │          │          │
-            &kp N6     &kp N7    &kp N8      &kp N9     &kp N0          &trans     &trans     &trans     &trans     &trans
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│     +    │    -     │    ,     │    .     │    =     │   │          │          │          │          │          │
-           &kp PLUS  &kp MINUS  &kp COMMA  &kp DOT  &kp EQUAL       &trans     &trans     &trans     &trans     &trans
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp ASTRK  &kp SLASH    &trans     &trans
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
-            >;
-        };
 
-       //layer number 5
-       tilde_layer {
-            bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │          │          │          │          │   │          │          │          │          │   ?      │
-             &trans     &trans     &trans     &trans     &trans         &trans    &trans    &trans     &trans    &kp QMARK
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │   `      │    '     │     '    │    "     │          │
-            &trans     &trans     &trans     &trans     &trans       &kp GRAVE  &kp APOS &kp APOS    &kp DQT    &trans
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │          │    ^     │     !    │     ?     │          │
-            &trans     &trans     &trans     &trans     &trans           &trans   &kp CARET   &kp EXCL &kp QMARK     &trans
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans          &trans     &trans
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
-            >;
-        };
+		arrows_layer {
+			bindings = <
+				&trans			&trans			&trans			&trans			&trans					&trans			&kp HOME		&kp UP			&kp END			&trans
+				&ht LGUI A		&ht LALT S	 	&ht LCTRL D 		&ht LSHIFT F  		&trans					&trans			&kp LEFT		&kp DOWN		&kp RIGHT		&trans
+				&trans			&trans			&trans			&trans			&trans					&trans			&kp PAGE_UP		&trans			&kp PAGE_DOWN		&trans
+													&trans  		&trans 					&trans			&trans
+			>;
+		};
+
+		ble_layer {
+			bindings = <
+				&bt BT_SEL 0		&bt BT_SEL 1		&bt BT_SEL 2		&bt BT_SEL 3		&bt BT_SEL 4				&trans			&trans			&trans			&trans			&trans
+				&trans			&trans			&trans			&trans			&trans					&sys_reset		&bt BT_CLR		&bt BT_PRV		&bt BT_NXT		&trans
+				&trans			&trans			&trans			&trans			&trans					&trans			&trans			&trans			&trans			&trans
+													&trans 			&trans					&trans			&trans
+			>;
+		};
+
+		test_layer {
+			bindings = <
+				&kp AT			&kp POUND		&kp DLLR		&kp PRCNT		&kp CARET				&kp AMPS		&kp STAR		&kp LPAR		&kp RPAR		&kp EQUAL
+				&kp FSLH		&kp QMARK		&kp BSLH		&kp NUBS		&kp PIPE2				&kp SEMI		&kp COLON		&kp SQT			&kp DQT			&kp COMMA
+				&kp GT			&kp LBKT		&kp RBKT		&kp GRAVE		&kp TILDE				&kp NUHS		&kp TILDE2		&trans			&trans			&trans
+													&trans 			&trans					&trans			&trans
+			>;
+		};
+
     };
 };
