@@ -23,8 +23,8 @@
 #define DEF_L 0
 #define LOW_L 1
 #define RAI_L 2
-#define NUM_L 3
-#define ARR_L 4
+#define ARR_L 3
+#define NUM_L 4
 #define BLE_L 5
 #define TES_L 6
 
@@ -89,7 +89,7 @@
 				&kp LS(N1)		&kp LS(N2)	  	&kp LS(N3)		&kp LS(N4)		&kp LS(N5)	  			&kp LS(N6)		&kp LS(N7)		&kp LS(N8)		&kp LS(N9)		&kp LS(N0)
 				&kp RA(N1)		&kp RA(N2)  		&kp RA(N3)		&kp RA(N4)		&kp RA(N5)				&kp RA(N6)		&kp LS(RBKT)		&kp LS(EQUAL)		&kp LS(MINUS) 		&kp EQUAL
 				&trans			&trans			&kp NUHS		&trans			&kp LG(LS(S))				&trans			&trans			&trans			&trans			&trans
-													&kp ENTER		&trans					&mo ARR_L		&mo 3 
+													&kp ENTER		&trans					&mo ARR_L		&mo NUM_L 
 			>;
 		};
 
@@ -98,17 +98,7 @@
 				&kp N1			&kp N2		  	&kp N3			&kp N4			&kp N5		  			&kp N6			&kp N7			&kp N8			&kp N9			&kp N0
 				&trans			&trans			&trans			&trans			&trans					&trans			&kp RA(APOS)	        &kp RA(NUHS)		&kp RA(LBKT)		&kp RA(RBKT)			
 				&trans			&trans			&kp LS(NUHS)	        &trans			&trans					&trans			&kp NUBS		&kp LS(NUBS)		&trans			&trans
-													&kp BKSP		&mo 3					&trans			&trans		
-			>;
-		};
-
-
-		num_layer {
-			bindings = <
-				&kp F1	  		&kp F2			&kp F3			&kp F4			&trans					&trans			&kp N7			&kp N8			&kp N9			&kp LS(RBKT)
-				&kp F5			&kp F6			&kp F7			&kp F8			&trans					&trans			&kp N4			&kp N5			&kp N6			&kp RBKT
-				&kp F9			&kp F10			&kp F11			&kp F12			&trans					&trans			&kp N1			&kp N2			&kp N3			&kp FSLH
-													&trans 			&trans					&kp COMMA		&kp DOT
+													&kp BKSP		&mo NUM_L				&trans			&trans		
 			>;
 		};
 
@@ -118,6 +108,15 @@
 				&ht LGUI A		&ht LALT S	 	&ht LCTRL D 		&ht LSHIFT F  		&trans					&trans			&kp LEFT		&kp DOWN		&kp RIGHT		&trans
 				&trans			&trans			&trans			&trans			&trans					&trans			&kp PAGE_UP		&trans			&kp PAGE_DOWN		&trans
 													&trans  		&trans 					&trans			&trans
+			>;
+		};
+
+		num_layer {
+			bindings = <
+				&kp F1	  		&kp F2			&kp F3			&kp F4			&trans					&trans			&kp N7			&kp N8			&kp N9			&kp LS(RBKT)
+				&kp F5			&kp F6			&kp F7			&kp F8			&trans					&trans			&kp N4			&kp N5			&kp N6			&kp RBKT
+				&kp F9			&kp F10			&kp F11			&kp F12			&trans					&trans			&kp N1			&kp N2			&kp N3			&kp FSLH
+													&trans 			&trans					&kp COMMA		&kp DOT
 			>;
 		};
 
