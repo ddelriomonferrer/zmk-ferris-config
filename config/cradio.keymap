@@ -78,7 +78,7 @@
 	};
 	combo_tab_2 {
 	    timeout-ms = <50>;
-	    key-positions = <3 4>;
+	    key-positions = <2 3>;
 	    bindings = <&kp TAB>;
 	};
 	combo_esc {
@@ -88,7 +88,7 @@
 	};
 	combo_esc_2 {
 	    timeout-ms = <50>;
-	    key-positions = <13 14>;
+	    key-positions = <12 13>;
 	    bindings = <&kp ESC>;
 	};
     };
@@ -138,7 +138,7 @@
 				&trans			&trans			&trans			&trans			&trans					&trans			&kp HOME		&kp UP			&kp END			&trans
 				&ht LGUI A		&ht LALT S	 	&ht LCTRL D 		&ht LSHIFT F  		&trans					&trans			&kp LEFT		&kp DOWN		&kp RIGHT		&trans
 				&trans			&trans			&trans			&trans			&trans					&trans			&kp PAGE_UP		&trans			&kp PAGE_DOWN		&trans
-													&trans  		&trans 					&trans			&trans
+													&kp BKSP  		&trans 					&trans			&trans
 			>;
 		};
 
