@@ -19,6 +19,21 @@
 #define OPEN &kp LG(O)
 
 //TODO define combos
+{
+    combos {
+        compatible = "zmk,combos";
+        combo_tab {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp TAB>;
+        };
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <10 11>;
+            bindings = <&kp ESC>;
+        };
+    };
+};
 
 #define DEF_L 0
 #define LOW_L 1
