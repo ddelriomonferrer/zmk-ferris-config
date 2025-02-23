@@ -96,6 +96,16 @@
 	    key-positions = <28 29>;
 	    bindings = <&kp ENTER>;
 	};
+	combo_supr {
+	    timeout-ms = <50>;
+	    key-positions = <7 8>;
+	    bindings = <&kp BKSP>;
+	};
+	combo_delete {
+	    timeout-ms = <50>;
+	    key-positions = <6 7>;
+	    bindings = <&kp DEL>;
+	};
     };
 
     keymap {
@@ -106,7 +116,7 @@
 				&kp Q			&kp W		 	&kp E		 	&kp R		   	&kp T					&kp Y			&kp U		  	&kp I			&kp O			&kp P
 				&hts LGUI A		&hts LALT S	 	&hts LCTRL D 		&htf LSHIFT F  		&kp G					&kp H			&htf RSHIFT J  		&hts RCTRL K		&hts LALT L		&hts LGUI QUOT
 				&kp Z			&kp X		 	&kp C		 	&kp V		   	&kp B					&kp N			&kp M		  	&kp COMMA		&kp DOT			&kp FSLH
-													&lt ARR_L ENTER		&mo LOW_L				&mo RAI_L		&kp SPACE
+													&lt ARR_L ENTER		&mo LOW_L				&lt RAI_L ENTER		&kp SPACE
 			>;
 		};
 
