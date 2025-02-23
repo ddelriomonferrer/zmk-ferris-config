@@ -23,10 +23,10 @@
 #define DEF_L 0
 #define LOW_L 1
 #define RAI_L 2
-#define ARR_L 3
-#define NUM_L 4
-#define BLE_L 5
-#define TES_L 6
+#define TES_L 3
+#define ARR_L 4
+#define NUM_L 5
+#define BLE_L 6
 
 / {
 	behaviors {
@@ -102,6 +102,15 @@
 			>;
 		};
 
+		test_layer {
+			bindings = <
+				&kp AT			&kp POUND		&kp DLLR		&kp PRCNT		&kp CARET				&kp AMPS		&kp STAR		&kp LPAR		&kp RPAR		&kp EQUAL
+				&kp FSLH		&kp QMARK		&kp BSLH		&kp NUBS		&kp PIPE2				&kp SEMI		&kp COLON		&kp SQT			&kp DQT			&kp COMMA
+				&kp GT			&kp LBKT		&kp RBKT		&kp GRAVE		&kp TILDE				&kp NUHS		&kp TILDE2		&trans			&trans			&trans
+													&trans 			&trans					&trans			&trans
+			>;
+		};
+
 		arrows_layer {
 			bindings = <
 				&trans			&trans			&trans			&trans			&trans					&trans			&kp HOME		&kp UP			&kp END			&trans
@@ -125,15 +134,6 @@
 				&bt BT_SEL 0		&bt BT_SEL 1		&bt BT_SEL 2		&bt BT_SEL 3		&bt BT_SEL 4				&trans			&trans			&trans			&trans			&trans
 				&trans			&trans			&trans			&trans			&trans					&sys_reset		&bt BT_CLR		&bt BT_PRV		&bt BT_NXT		&trans
 				&trans			&trans			&trans			&trans			&trans					&trans			&trans			&trans			&trans			&trans
-													&trans 			&trans					&trans			&trans
-			>;
-		};
-
-		test_layer {
-			bindings = <
-				&kp AT			&kp POUND		&kp DLLR		&kp PRCNT		&kp CARET				&kp AMPS		&kp STAR		&kp LPAR		&kp RPAR		&kp EQUAL
-				&kp FSLH		&kp QMARK		&kp BSLH		&kp NUBS		&kp PIPE2				&kp SEMI		&kp COLON		&kp SQT			&kp DQT			&kp COMMA
-				&kp GT			&kp LBKT		&kp RBKT		&kp GRAVE		&kp TILDE				&kp NUHS		&kp TILDE2		&trans			&trans			&trans
 													&trans 			&trans					&trans			&trans
 			>;
 		};
