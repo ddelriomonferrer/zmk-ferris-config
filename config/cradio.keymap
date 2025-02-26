@@ -27,6 +27,10 @@
 #define BLE_L 6
 #define HEL_L 7
 
+    &lt {
+	    tapping-term-ms = <300>;
+    };
+
 / {
 	behaviors {
 		ht: hold_tap_mods_standard {
@@ -114,10 +118,6 @@
 	    key-positions = <6 7>;
 	    bindings = <&kp DEL>;
 	};
-    };
-
-    &lt {
-	    tapping-term-ms = <300>;
     };
 
     keymap {
