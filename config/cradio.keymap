@@ -25,7 +25,7 @@
 #define ARR_L 4
 #define NUM_L 5
 #define BLE_L 6
-#define HEL_L 6
+#define HEL_L 7
 
 / {
 	behaviors {
