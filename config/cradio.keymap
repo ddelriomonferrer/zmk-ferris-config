@@ -125,13 +125,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp DOT>, <&kp LBKT>;
-            mods = <(MOD_LSFT)>;
-        };
-        dotapostrof: dot_apostrof {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp MINUS>;
-            mods = <(MOD_LCTL)>;
+            mods = <(MOD_LSFT|MOD_LCTL)>;
         };
     };
 
