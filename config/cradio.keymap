@@ -124,7 +124,7 @@
         dotgrave: dot_grave {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp GRAVE>;
+            bindings = <&kp DOT>, <&kp LBKT>;
             mods = <(MOD_LSFT)>;
         };
     };
