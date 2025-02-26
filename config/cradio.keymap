@@ -180,7 +180,7 @@
 		last_columns_helper_layer {
 			bindings = <
 				&kp TAB			&trans			&trans			&trans			&trans					&trans			&trans			&trans			&trans			&kp BKSP
-				&kp ESC			&kp Z			&trans			&trans			&trans					&trans			&trans			&trans			&trans			&kp QUOT
+				&kp ESC			&trans			&trans			&trans			&trans					&trans			&trans			&trans			&trans			&kp QUOT
 				&kp LSHIFT		&trans			&trans			&trans			&trans					&trans			&trans			&trans			&trans			&kp ENTER
 													&trans			&trans					&trans			&trans
 			>;
