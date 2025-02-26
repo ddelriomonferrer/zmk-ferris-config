@@ -25,6 +25,7 @@
 #define ARR_L 4
 #define NUM_L 5
 #define BLE_L 6
+#define HEL_L 6
 
 / {
 	behaviors {
@@ -71,6 +72,11 @@
 
     combos {
 	compatible = "zmk,combos";
+	combo_cntrl_alt_supr {
+	    timeout-ms = <50>;
+	    key-positions = <5 6 7>;
+	    bindings = <&kp LA(LC(DEL))>;
+	};
 	combo_grave {
 	    timeout-ms = <50>;
 	    key-positions = <8 9>;
@@ -126,7 +132,7 @@
 				&kp Q			&kp W		 	&kp E		 	&kp R		   	&kp T					&kp Y			&kp U		  	&kp I			&kp O			&kp P
 				&hts LGUI A		&hts LALT S	 	&hts LCTRL D 		&htf LSHIFT F  		&kp G					&kp H			&htf RSHIFT J  		&hts RCTRL K		&hts LALT L		&hts LGUI QUOT
 				&kp Z			&kp X		 	&kp C		 	&kp V		   	&kp B					&kp N			&kp M		  	&kp COMMA		&kp DOT			&kp FSLH
-													&lt ARR_L ENTER		&mo LOW_L				&mo RAI_L		&kp SPACE
+													&lt ARR_L ENTER		&mo LOW_L				&mo RAI_L		&lt HEL_L SPACE
 			>;
 		};
 
@@ -182,6 +188,15 @@
 				&trans			&trans			&trans			&trans			&trans					&sys_reset		&bt BT_CLR		&bt BT_PRV		&bt BT_NXT		&trans
 				&trans			&trans			&trans			&trans			&trans					&trans			&trans			&trans			&trans			&trans
 													&trans 			&trans					&trans			&trans
+			>;
+		};
+
+		last_columns_helper_layer {
+			bindings = <
+				&kp TAB			&trans			&trans			&trans			&trans					&trans			&trans			&trans			&trans			&kp BKSP
+				&kp ESC			&trans			&trans			&trans			&trans					&trans			&trans			&trans			&trans			&kp QUOT
+				&kp LSHIFT		&trans			&trans			&trans			&trans					&trans			&trans			&trans			&trans			&kp ENTER
+																&trans 			&trans					&trans			&trans
 			>;
 		};
 
