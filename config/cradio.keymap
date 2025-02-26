@@ -155,7 +155,7 @@
 				&trans			&trans			&trans			&trans			&trans					&kp PAGE_UP		&kp HOME		&kp UP			&kp END			&trans
 				&ht LGUI A		&ht LALT S	 	&ht LCTRL D 		&ht LSHIFT F  		&trans					&trans			&kp LEFT		&kp DOWN		&kp RIGHT		&trans
 				&kp LC(Z)		&kp LC(X)		&kp LC(C)		&kp LC(V)		&trans					&kp PAGE_DOWN		&trans			&trans			&trans			&trans
-													&kp BKSP  		&trans 					&trans			&trans
+													&kp BKSP  		&trans 					&mkp LCLK		&mkp RCLK
 			>;
 		};
 
