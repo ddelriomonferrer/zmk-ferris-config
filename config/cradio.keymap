@@ -161,7 +161,7 @@
 		arrows_layer {
 			bindings = <
 				&kp TAB			&trans			&trans			&trans			&trans					&kp PAGE_UP		&kp HOME		&kp UP			&kp END			&kp BKSP
-				&kp ESC			&ht LALT S	 	&ht LCTRL D 		&ht LSHIFT F  		&trans					&trans			&kp LEFT		&kp DOWN		&kp RIGHT		&kp QUOT
+				&kp ESC			&ht LALT S	 	&ht LCTRL D 		&ht LSHIFT F  		&trans					&trans			&kp LEFT		&kp DOWN		&kp RIGHT		&kp LBKT
 				&kp LC(Z)		&kp LC(X)		&kp LC(C)		&kp LC(V)		&trans					&kp PAGE_DOWN		&trans			&trans			&trans			&kp ENTER
 													&kp BKSP  		&trans 					&mkp LCLK		&mkp RCLK
 			>;
