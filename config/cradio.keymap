@@ -25,7 +25,6 @@
 #define ARR_L 3
 #define NUM_L 4
 #define BLE_L 5
-#define HEL_L 6
 
     &lt {
 	    tapping-term-ms = <300>;
@@ -120,15 +119,6 @@
 	};
     };
 
-    behaviors {
-        dotgrave: dot_grave {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp LBKT>;
-            mods = <(MOD_LSFT|MOD_LCTL)>;
-        };
-    };
-
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
@@ -145,7 +135,7 @@
 				&kp Q			&kp W		 	&kp E		 	&kp R		   	&kp T					&kp Y			&kp U		  	&kp I			&kp O			&kp P
 				&hts LGUI A		&hts LALT S	 	&hts LCTRL D 		&htf LSHIFT F  		&kp G					&kp H			&htf RSHIFT J  		&hts RCTRL K		&hts LALT L		&hts LGUI QUOT
 				&kp Z			&kp X		 	&kp C		 	&kp V		   	&kp B					&kp N			&kp M		  	&kp COMMA		&kp DOT			&kp FSLH
-													&lt ARR_L ENTER		&mo LOW_L				&mo RAI_L		&lt HEL_L SPACE
+													&lt ARR_L ENTER		&mo LOW_L				&mo RAI_L		&kp SPACE
 			>;
 		};
 
@@ -194,15 +184,5 @@
 													&trans 			&trans					&trans			&trans
 			>;
 		};
-
-		last_columns_helper_layer {
-			bindings = <
-				&kp TAB			&trans			&trans			&trans			&trans					&trans			&trans			&trans			&trans			&kp BKSP
-				&kp ESC			&kp Z			&trans			&trans			&trans					&trans			&trans			&trans			&trans			&kp QUOT
-				&kp LSHIFT		&trans			&trans			&trans			&trans					&trans			&trans			&trans			&trans			&kp ENTER
-													&trans			&trans					&trans			&trans
-			>;
-		};
-
     };
 };
