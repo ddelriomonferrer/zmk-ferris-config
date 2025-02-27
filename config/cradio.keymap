@@ -129,6 +129,14 @@
         };
     };
 
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <1 2>;
+            then-layer = <5>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -162,9 +170,9 @@
 
 		arrows_layer {
 			bindings = <
-				&trans			&trans			&trans			&trans			&trans					&kp PAGE_UP		&kp HOME		&kp UP			&kp END			&trans
-				&ht LGUI A		&ht LALT S	 	&ht LCTRL D 		&ht LSHIFT F  		&trans					&trans			&kp LEFT		&kp DOWN		&kp RIGHT		&trans
-				&kp LC(Z)		&kp LC(X)		&kp LC(C)		&kp LC(V)		&trans					&kp PAGE_DOWN		&trans			&trans			&trans			&trans
+				&kp TAB			&trans			&trans			&trans			&trans					&kp PAGE_UP		&kp HOME		&kp UP			&kp END			&kp BKSP
+				&kp ESC			&ht LALT S	 	&ht LCTRL D 		&ht LSHIFT F  		&trans					&trans			&kp LEFT		&kp DOWN		&kp RIGHT		&kp QUOT
+				&kp LC(Z)		&kp LC(X)		&kp LC(C)		&kp LC(V)		&trans					&kp PAGE_DOWN		&trans			&trans			&trans			&kp ENTER
 													&kp BKSP  		&trans 					&mkp LCLK		&mkp RCLK
 			>;
 		};
