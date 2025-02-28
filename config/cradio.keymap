@@ -153,7 +153,7 @@
 			bindings = <
 				&kp N1			&kp N2		  	&kp N3			&kp N4			&kp N5		  			&kp N6			&kp N7			&kp N8			&kp N9			&kp N0
 				&kp GRAVE		&trans			&trans			&trans			&trans					&trans			&kp RA(APOS)	        &kp RA(NUHS)		&kp RA(LBKT)		&kp RA(RBKT)			
-				&trans			&trans			&kp LS(NUHS)	        &trans			&trans					&trans			&kp NUBS		&kp LS(NUBS)		&trans			&trans
+				&kp LSHIFT		&trans			&kp LS(NUHS)	        &trans			&trans					&trans			&kp NUBS		&kp LS(NUBS)		&trans			&trans
 													&kp BKSP		&mo NUM_L				&trans			&trans		
 			>;
 		};
