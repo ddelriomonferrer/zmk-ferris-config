@@ -118,15 +118,7 @@
 	    bindings = <&kp DEL>;
 	};
     };
-
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <LOW_L RAI_L>;
-            then-layer = BLE_L<>;
-        };
-    };
-
+ 
     keymap {
         compatible = "zmk,keymap";
 
