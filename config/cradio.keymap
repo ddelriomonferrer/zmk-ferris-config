@@ -84,12 +84,12 @@
 	};
 	combo_tab {
 	    timeout-ms = <50>;
-	    key-positions = <3 4>;
+	    key-positions = <1 2>;
 	    bindings = <&kp TAB>;
 	};
 	combo_esc {
 	    timeout-ms = <50>;
-	    key-positions = <13 14>;
+	    key-positions = <11 12>;
 	    bindings = <&kp ESC>;
 	};
 	combo_enter {
