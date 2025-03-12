@@ -22,9 +22,9 @@
 #define DEF_L 0
 #define LOW_L 1
 #define RAI_L 2
-#define ARR_L 3
-#define NUM_L 4
-#define BLE_L 5
+#define BLE_L 3
+#define ARR_L 4
+#define NUM_L 5
 
     &lt {
 	    tapping-term-ms = <300>;
@@ -108,7 +108,15 @@
 	    bindings = <&kp DEL>;
 	};
     };
- 
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -140,6 +148,15 @@
 			>;
 		};
 
+		ble_layer {
+			bindings = <
+				&bt BT_SEL 0		&bt BT_SEL 1		&bt BT_SEL 2		&bt BT_SEL 3		&bt BT_SEL 4				&trans			&trans			&trans			&trans			&trans
+				&trans			&kp N			&trans			&trans			&trans					&sys_reset		&bt BT_CLR		&bt BT_PRV		&bt BT_NXT		&trans
+				&trans			&trans			&trans			&trans			&trans					&trans			&trans			&trans			&trans			&trans
+													&trans 			&trans					&trans			&trans
+			>;
+		};
+
 		arrows_layer {
 			bindings = <
 				&kp TAB			&trans			&trans			&trans			&trans					&kp PAGE_UP		&kp HOME		&kp UP			&kp END			&kp BKSP
@@ -158,13 +175,5 @@
 			>;
 		};
 
-		ble_layer {
-			bindings = <
-				&bt BT_SEL 0		&bt BT_SEL 1		&bt BT_SEL 2		&bt BT_SEL 3		&bt BT_SEL 4				&trans			&trans			&trans			&trans			&trans
-				&trans			&kp N			&trans			&trans			&trans					&sys_reset		&bt BT_CLR		&bt BT_PRV		&bt BT_NXT		&trans
-				&trans			&trans			&trans			&trans			&trans					&trans			&trans			&trans			&trans			&trans
-													&trans 			&trans					&trans			&trans
-			>;
-		};
     };
 };
