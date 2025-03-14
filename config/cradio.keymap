@@ -27,7 +27,7 @@
 #define NUM_L 5
 
     &lt {
-	    tapping-term-ms = <300>;
+	    tapping-term-ms = <200>;
     };
 
 / {
@@ -107,10 +107,6 @@
 	    key-positions = <6 7>;
 	    bindings = <&kp DEL>;
 	};
-    };
-
-    &lt {
-	    tapping-term-ms = <200>;
     };
 
     keymap {
