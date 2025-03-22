@@ -47,6 +47,7 @@
 			    #binding-cells = <2>;
 			    hold-trigger-key-positions = <KEYS_L THUMBS>;
 			    hold-trigger-on-release;
+			bindings = <&kp>, <&kp>;
 		};
 		hmr: hold_tap_mods_r {
 			compatible = "zmk,behavior-hold-tap";
@@ -57,6 +58,7 @@
 			    #binding-cells = <2>;
 			    hold-trigger-key-positions = <KEYS_R THUMBS>;
 			    hold-trigger-on-release;
+			bindings = <&kp>, <&kp>;
 		};
 
 		ht: hold_tap_mods_standard {
