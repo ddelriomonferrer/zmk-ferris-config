@@ -42,22 +42,24 @@
 			compatible = "zmk,behavior-hold-tap";
 			label = "HOMEROW_MODS";
     			flavor = "balanced";
-			    quick-tap-ms = <175>;
-			    require-prior-idle-ms = <150>;
-			    #binding-cells = <2>;
-			    hold-trigger-key-positions = <KEYS_L THUMBS>;
-			    hold-trigger-on-release;
+			tapping-term-ms = <280>;
+			quick-tap-ms = <175>;
+			require-prior-idle-ms = <150>;
+			#binding-cells = <2>;
+			hold-trigger-key-positions = <KEYS_L THUMBS>;
+			hold-trigger-on-release;
 			bindings = <&kp>, <&kp>;
 		};
 		hmr: hold_tap_mods_r {
 			compatible = "zmk,behavior-hold-tap";
 			label = "HOMEROW_MODS";
     			flavor = "balanced";
-			    quick-tap-ms = <175>;
-			    require-prior-idle-ms = <150>;
-			    #binding-cells = <2>;
-			    hold-trigger-key-positions = <KEYS_R THUMBS>;
-			    hold-trigger-on-release;
+			tapping-term-ms = <280>;
+			quick-tap-ms = <175>;
+			require-prior-idle-ms = <150>;
+			#binding-cells = <2>;
+			hold-trigger-key-positions = <KEYS_R THUMBS>;
+			hold-trigger-on-release;
 			bindings = <&kp>, <&kp>;
 		};
 
