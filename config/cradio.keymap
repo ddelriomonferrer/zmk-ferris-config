@@ -38,7 +38,7 @@
 / {
 	behaviors {
 
-		hml: hold_tap_mods_standard {
+		hml: hold_tap_mods_l {
 			compatible = "zmk,behavior-hold-tap";
 			label = "HOMEROW_MODS";
     			flavor = "balanced";
@@ -48,7 +48,7 @@
 			    hold-trigger-key-positions = <KEYS_L THUMBS>;
 			    hold-trigger-on-release;
 		};
-		hmr: hold_tap_mods_standard {
+		hmr: hold_tap_mods_r {
 			compatible = "zmk,behavior-hold-tap";
 			label = "HOMEROW_MODS";
     			flavor = "balanced";
